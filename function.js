@@ -1,5 +1,6 @@
 
 //Boton "leer"
+
 function showText() {
   var text = document.getElementById("text");
   if (text.style.display === "block") {
@@ -8,7 +9,18 @@ function showText() {
     text.style.display = "block";
   }
 }
+
+function changeText() {
+  var button = document.getElementById("learn-more");
+  if(button.textContent === "Leer"){
+    button.textContent = "Ocultar"
+  } else {
+    button.textContent = "Leer"
+  }
+} 
+
 //Boton "Mostrar Skills"
+
 const button = document.getElementById("complete");
 const bar1 = document.getElementById("bar1");
 const bar2 = document.getElementById("bar2");
@@ -27,9 +39,17 @@ button.addEventListener("click", function() {
     bar3.style.width = "0%";
   }
   show = !show;
+
+  if(button.textContent ==="Mostrar Skills"){
+    button.textContent = "Ocultar Skills"
+  } else{
+    button.textContent = "Mostrar Skills"
+  }
+    
 });
 
 //Contador
+
 document.getElementById("like-button").addEventListener("click", function() {
   var likeCount = parseInt(document.getElementById("like-count").innerHTML.split(" ")[0]);
   likeCount = likeCount + 1;
